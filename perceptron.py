@@ -1,6 +1,5 @@
 """
-Perceptron
-
+Perceptron by W.Ketel 2023
 """
 
 import numpy as np
