@@ -5,7 +5,7 @@ def testPerceptron(perceptron: p.Perceptron, truthTable: list, learningrate: int
     '''
     
     '''
-    trainingMax = 3
+    trainingMax = 50
     initResults, initCorrect = perceptron.test(truthTable)
     i = 0
     corrects = 0

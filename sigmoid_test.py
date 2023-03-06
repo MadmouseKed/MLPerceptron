@@ -60,14 +60,11 @@ class testSigmoidNeuron:
         print(f'Testing for x1 =1, x2 =1, output = 0: {round(Nand.Activation([1,1]),5)}')
 
 
-class testSigmoidNeuronLayer:
-    pass
-
 class testSigmoidNeuronNetwork:
     def testAdder(self):
-        straight = sig.Neuron([40], 20)
-        Nand = sig.Neuron([-100,-100], -80)
-        And = sig.Neuron([13, 13], 10)
+        # straight = sig.Neuron([40], 20)
+        # Nand = sig.Neuron([-100,-100], -80)
+        # And = sig.Neuron([13, 13], 10)
         layer1 = sig.NeuronLayer([sig.Neuron([40,0], 20),Nand,sig.Neuron([0,40], 20)])
         layer2 = sig.NeuronLayer([sig.Neuron([-200,-200,0], -80),sig.Neuron([0,-200,-200], -80),sig.Neuron([30,0,30], 10)])
         layer3 = sig.NeuronLayer([sig.Neuron([-200,-200,0], -80),sig.Neuron([0,0,100], 10)])
@@ -92,13 +89,24 @@ def tests1():
     print("---------")
     tests1.testNAND()
 
-def tests3():
+def tests2():
     print("#########")
     print('Percepton Network Section')
-    tests3 = testSigmoidNeuronNetwork()
+    tests2 = testSigmoidNeuronNetwork()
     print("---------")
-    tests3.testAdder()
+    tests2.testAdder()
     print("---------")
 
-# tests1()
-tests3()
+tests1()
+tests2()
+
+flag = True
+while flag:
+    print(f'Which section do you want to test? \n 1: Neuron section \n 2: NeuronLayer section \n else: Quit')
+    choice = int(input())
+    if choice == 1:
+        tests1()
+    elif choice == 2:
+        tests2()
+    else:
+        flag = False

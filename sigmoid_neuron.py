@@ -101,12 +101,3 @@ class NeuronNetwork(NeuronLayer):
         for layer in self.layers:
             result = layer.Activation(result)
         return result
-
-# layer1 = sig.NeuronLayer([sig.Neuron([40,0], 20),Nand,sig.Neuron([0,40], 20)])
-# layer2 = sig.NeuronLayer([sig.Neuron([100,100,0], 80),sig.Neuron([0,100,100], 80),sig.Neuron([13,0,13], 10)])
-# layer3 = sig.NeuronLayer([sig.Neuron([100,100,0], 80),sig.Neuron([0,0,40], 20)])
-# test = Neuron([40,0], 20)
-# test = Neuron([100,100,0], 80)
-# test = Neuron([-200,-200,0], -80)
-test = Neuron([30,0,30], 10)
-print(round(test.Activation([1,0,1]),5))
