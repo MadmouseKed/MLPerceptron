@@ -5,7 +5,7 @@ def testPerceptron(perceptron: p.Perceptron, truthTable: list, learningrate: int
     '''
     
     '''
-    trainingMax = 50
+    trainingMax = 3
     initResults, initCorrect = perceptron.test(truthTable)
     i = 0
     corrects = 0
@@ -40,8 +40,8 @@ andPerceptron = p.Perceptron([random.random(),random.random()],random.random())
 xorTable = [[0,0,0],[0,1,1],[1,0,1],[1,1,0]]
 xorPerceptron = p.Perceptron([random.random(),random.random()],random.random())
 
-testPerceptron(andPerceptron, andTable, learningrate)
-# testPerceptron(xorPerceptron, xorTable, learningrate)
+# testPerceptron(andPerceptron, andTable, learningrate)
+testPerceptron(xorPerceptron, xorTable, learningrate)
 # flag = True
 flag = False
 while flag:
